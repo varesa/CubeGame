@@ -11,8 +11,10 @@
 #include <iostream>
 
 #include "GameTimer.h"
+#include "Game.h"
 
 GameTimer *timer;
+Game *game;
 
 void initGLUT(int argc, char **argv) {
 	std::cout << "Initializing GLUT\n";
@@ -82,6 +84,9 @@ int main(int argc, char **argv) {
 	glutIdleFunc(renderScene);
 
 	timer = new GameTimer();
+
+	game = new Game();
+	game->gameState = START;
 
 	std::cout << "Going to main loop\n";
 
