@@ -10,6 +10,10 @@
 #include <GL/glut.h>
 #include <iostream>
 
+#include "GameTimer.h"
+
+GameTimer *timer;
+
 void initGLUT(int argc, char **argv) {
 	std::cout << "Initializing GLUT\n";
 	glutInit(&argc, argv);
@@ -52,6 +56,8 @@ void renderScene() {
 	glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);
 	glLoadIdentity();
 
+	long deltaT = timer->getTimeAndReset();
+
 	glutSwapBuffers();
 }
 
@@ -74,6 +80,8 @@ int main(int argc, char **argv) {
 
 	glutDisplayFunc(renderScene);
 	glutIdleFunc(renderScene);
+
+	timer = new GameTimer();
 
 	std::cout << "Going to main loop\n";
 
