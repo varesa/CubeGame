@@ -1,7 +1,7 @@
 #ifndef ENTITYFLAGS_H
 #define ENTITYFLAGS_H
 
-enum {
+enum EntityFlags {
 
 	NO_RENDER, NO_ACT
 

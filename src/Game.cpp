@@ -1,6 +1,7 @@
 #include "Game.h"
 
-Game::Game() {
+#include "Direction.h"
 
+Game::Game() {
 
 }
