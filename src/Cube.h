@@ -18,9 +18,7 @@ public:
 	void act(bool* keys, long time);
 
 private:
-	int x;
-	int y;
-	int z;
+	//x, y and z inherited from Entity
 
 	int vx = 0;
 	int vy = 0;
