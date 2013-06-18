@@ -1,3 +1,4 @@
+#include "Ground.h"
 #include "GameState.h"
 
 #ifndef GAME_H
@@ -8,6 +9,10 @@ public:
 	Game();
 	GameState gameState;
 
+private:
+	std::vector<Ground> ground;
+	Cube player;
+	std::vector<Cube> enemies;
 };
 
 #endif
