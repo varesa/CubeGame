@@ -8,7 +8,7 @@
 #ifndef CUBE_H_
 #define CUBE_H_
 
-class Cube {
+class Cube : public Entity {
 public:
 	Cube(int x, int y, int z, int size);
 	Cube();
