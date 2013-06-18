@@ -11,6 +11,7 @@
 #include <iostream>
 
 #include "GameTimer.h"
+#include "GameState.h"
 #include "Game.h"
 
 GameTimer *timer;
@@ -86,7 +87,7 @@ int main(int argc, char **argv) {
 	timer = new GameTimer();
 
 	game = new Game();
-	game->gameState = START;
+	game->gameState = GameState::START;
 
 	std::cout << "Going to main loop\n";
 
