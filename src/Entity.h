@@ -10,10 +10,10 @@ public:
 	void act();
 	void draw();
 
-private:
-	int x;
-	int y;
-	int z;
+protected:
+	float x;
+	float y;
+	float z;
 
 	std::vector<EntityFlags> flags;
 };

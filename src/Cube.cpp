@@ -11,7 +11,7 @@
 
 #include "Cube.h"
 
-Cube::Cube(int x, int y, int z, int size) {
+Cube::Cube(float x, float y, float z, float size) {
 	this->x = x;
 	this->y = y;
 	this->z = z;

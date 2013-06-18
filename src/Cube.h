@@ -12,7 +12,7 @@
 
 class Cube : public Entity {
 public:
-	Cube(int x, int y, int z, int size);
+	Cube(float x, float y, float z, float size);
 	Cube();
 	void draw();
 	void act(bool* keys, long time);
@@ -20,10 +20,10 @@ public:
 private:
 	//x, y and z inherited from Entity
 
-	int vx = 0;
-	int vy = 0;
+	float vx = 0;
+	float vy = 0;
 
-	int size;
+	float size;
 };
 
 #endif /* CUBE_H_ */
