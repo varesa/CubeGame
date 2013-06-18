@@ -20,8 +20,8 @@ private:
 	int y;
 	int z;
 
-	int vx;
-	int vy;
+	int vx = 0;
+	int vy = 0;
 
 	int size;
 };
