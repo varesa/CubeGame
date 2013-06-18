@@ -61,6 +61,17 @@ void renderScene() {
 
 	long deltaT = timer->getTimeAndReset();
 
+	std::vector<Entity> *entities = game->getEntities();
+
+	unsigned int i;
+	for(i = 0; i < entities->size(); i++) {
+		((Entity) entities->at(i)).act(deltaT);
+	}
+
+	for(i = 0; i< entities->size(); i++) {
+		((Entity) entities->at(i)).draw(deltaT);
+	}
+
 	glutSwapBuffers();
 }
 
