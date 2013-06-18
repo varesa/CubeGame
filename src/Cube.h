@@ -5,6 +5,8 @@
  *      Author: esa
  */
 
+#include "Entity.h"
+
 #ifndef CUBE_H_
 #define CUBE_H_
 
