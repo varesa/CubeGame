@@ -1,9 +1,9 @@
 #include "Entity.h"
 
-virtual void Entity::act() {
+void Entity::act() {
 
 }
 
-virtual void Entity::draw() {
+void Entity::draw() {
 
 }

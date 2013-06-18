@@ -7,8 +7,8 @@
 class Entity {
 
 public:
-	virtual void act();
-	virtual void draw();
+	void act();
+	void draw();
 
 private:
 	int x;
