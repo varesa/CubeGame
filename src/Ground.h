@@ -17,8 +17,8 @@ public:
 
 private:
 	// x,y and z inherited from Entity
-	int width;
-	int height;
+	float width;
+	float height;
 };
 
 #endif /* GROUND_H_ */
