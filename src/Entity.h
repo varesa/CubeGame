@@ -7,8 +7,8 @@
 class Entity {
 
 public:
-	void act(long deltaT);
-	void draw(long deltaT);
+	virtual void act(long deltaT);
+	virtual void draw(long deltaT);
 
 protected:
 	float x;
