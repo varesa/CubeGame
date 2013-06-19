@@ -9,12 +9,14 @@
 class Game {
 public:
 	Game();
+	void init();
 	GameState gameState;
-	std::vector<Entity>* getEntities();
+	std::vector<Entity*>* getEntities();
 private:
-	std::vector<Ground> *ground;
+	void initGround();
+	std::vector<Ground*> *ground;
 	Cube *player;
-	std::vector<Cube> enemies;
+	std::vector<Cube*> enemies;
 };
 
 #endif
