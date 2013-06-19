@@ -20,6 +20,7 @@ std::vector<Entity*>* Game::getEntities() {
 }
 
 void Game::init() {
+	gameState = GameState::START;
 	initGround();
 }
 
@@ -27,16 +28,16 @@ void Game::initGround() {
 	std::ifstream *stageFile = new std::ifstream();
 	stageFile->open("stage.txt");
 
-	if(stageFile == nullptr ){//|| !stageFile->is_open()) {
+	if(stageFile == nullptr || !stageFile->is_open()) {
 		printf("Stage-file not found or could not open");
 		throw std::exception();
 	}
 
 	std::string line;
-	float *x, *y, *w, *h;
+	float x = 0, y = 0, w = 0, h = 0;
 	while(std::getline(*stageFile, line)) {
-		sscanf(line.c_str(), "%f %f %f %f", x, y, w, h);
-		ground->push_back(new Ground(*x, *y ,*w, *h));
+		sscanf(line.c_str(), "%f %f %f %f", &x, &y, &w, &h);
+		ground->push_back(new Ground(x, y , w, h));
 	}
 
 
