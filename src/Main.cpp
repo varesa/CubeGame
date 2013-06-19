@@ -47,7 +47,7 @@ void changeSize(int w, int h) {
 	glViewport(0, 0, w, h);
 
 	// Set the correct perspective.
-	gluPerspective(45,ratio,1,1000);
+	gluPerspective(45,ratio,1,2000);
 
 	// Get Back to the Modelview
 	glMatrixMode(GL_MODELVIEW);
@@ -56,6 +56,7 @@ void changeSize(int w, int h) {
 bool* spKeys = new bool[256];
 
 void renderScene() {
+
 	glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);
 	glLoadIdentity();
 
@@ -63,10 +64,13 @@ void renderScene() {
 
 	std::vector<Entity*> *entities = game->getEntities();
 
+
 	unsigned int i;
 	for(i = 0; i < entities->size(); i++) {
 		((Entity*) entities->at(i))->act(deltaT);
 	}
+
+	glTranslatef(0, 0, -650.0f);
 
 	for(i = 0; i< entities->size(); i++) {
 		((Entity*) entities->at(i))->draw(deltaT);
@@ -98,7 +102,7 @@ int main(int argc, char **argv) {
 	timer = new GameTimer();
 
 	game = new Game();
-	game->gameState = GameState::START;
+	game->init();
 
 	std::cout << "Going to main loop\n";
 
