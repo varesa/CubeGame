@@ -8,7 +8,7 @@
 #include "Ground.h"
 
 Game::Game() {
-
+	ground = new std::vector<Ground*>();
 }
 
 std::vector<Entity*>* Game::getEntities() {
