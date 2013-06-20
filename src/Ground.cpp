@@ -56,7 +56,6 @@ void Ground::draw(long deltaT) {
 		glVertex3f(x+width, y, -128);
 		glVertex3f(x+width, y+height, -128);
 	glEnd();
-	std::cout << "Drawing!";
 }
 
 
