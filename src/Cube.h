@@ -20,8 +20,8 @@ public:
 private:
 	//x, y and z inherited from Entity
 
-	float vx = 0;
-	float vy = 0;
+    float vx;
+    float vy;
 
 	float size;
 };
