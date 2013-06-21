@@ -1,6 +1,11 @@
+# Eclipse project
 /Debug
 .cproject
 .project
+
+# Qt-Creator project
+*.pro
+*.pro.*
 
 # Compiled Object files
 *.slo
