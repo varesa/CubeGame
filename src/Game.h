@@ -2,6 +2,7 @@
 #include "Cube.h"
 #include "Entity.h"
 #include "GameState.h"
+#include "Stage.h"
 
 #ifndef GAME_H
 #define GAME_H
@@ -13,8 +14,8 @@ public:
 	GameState gameState;
 	std::vector<Entity*>* getEntities();
 private:
-	void initGround();
-	std::vector<Ground*> *ground;
+
+    Stage* stage;
 	Cube *player;
 	std::vector<Cube*> enemies;
 };
