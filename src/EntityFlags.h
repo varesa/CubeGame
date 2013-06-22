@@ -4,11 +4,11 @@
  * Author: Esa Varemo
  */
 
-#ifndef ENTITYFLAGS_H
-#define ENTITYFLAGS_H
+#ifndef ENTITYFLAGS_H_
+#define ENTITYFLAGS_H_
 
 enum class EntityFlags {
 	NO_RENDER, NO_ACT
 };
 
-#endif
+#endif /* ENTITYFLAGS_H_ */

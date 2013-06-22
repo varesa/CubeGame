@@ -4,8 +4,8 @@
  * Author: Esa Varemo
  */
 
-#ifndef STAGE_H
-#define STAGE_H
+#ifndef STAGE_H_
+#define STAGE_H_
 
 #include <fstream>
 #include <vector>
@@ -27,4 +27,4 @@ private:
     std::vector<Ground*> *ground;
 };
 
-#endif // STAGE_H
+#endif /* STAGE_H_ */

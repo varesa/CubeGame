@@ -4,11 +4,11 @@
  * Author: Esa Varemo
  */
 
-#ifndef GAMESTATE_H
-#define GAMESTATE_H
+#ifndef GAMESTATE_H_
+#define GAMESTATE_H_
 
 enum class GameState {
 	START, INGAME, GAMEOVER
 };
 
-#endif
+#endif /* GAMESTATE_H_ */

@@ -4,8 +4,8 @@
  * Author: Esa Varemo
  */
 
-#ifndef ENTITY_H
-#define ENTITY_H
+#ifndef ENTITY_H_
+#define ENTITY_H_
 
 #include <vector>
 #include "EntityFlags.h"
@@ -24,4 +24,4 @@ protected:
 	std::vector<EntityFlags> flags;
 };
 
-#endif
+#endif /* ENTITY_H_ */

@@ -10,8 +10,8 @@
 #include "GameState.h"
 #include "Stage.h"
 
-#ifndef GAME_H
-#define GAME_H
+#ifndef GAME_H_
+#define GAME_H_
 
 class Game {
 public:
@@ -26,4 +26,4 @@ private:
 	std::vector<Cube*> enemies;
 };
 
-#endif
+#endif /* GAME_H_ */
