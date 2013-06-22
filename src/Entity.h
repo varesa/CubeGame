@@ -8,6 +8,7 @@
 #define ENTITY_H_
 
 #include <vector>
+
 #include "EntityFlags.h"
 
 class Entity {

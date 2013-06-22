@@ -6,10 +6,13 @@
 
 
 #include <iostream>
-#include "Ground.h"
+
 #include <GL/gl.h>
 #include <GL/glu.h>
 #include <GL/glut.h>
+
+#include "Ground.h"
+
 
 Ground::Ground(float x, float y, float w, float h) {
 	this->x = x;

@@ -1,14 +1,13 @@
 /*
  * Cube.h
  *
- *  Created on: Jan 31, 2013
- *      Author: Esa
+ * Author: Esa Varemo
  */
-
-#include "Entity.h"
 
 #ifndef CUBE_H_
 #define CUBE_H_
+
+#include "Entity.h"
 
 class Cube : public Entity {
 public:
