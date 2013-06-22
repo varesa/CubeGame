@@ -7,6 +7,10 @@
 *.pro
 *.pro.*
 
+# Compilation directories specified in Makefile
+target/
+build/
+
 # Compiled Object files
 *.slo
 *.lo
