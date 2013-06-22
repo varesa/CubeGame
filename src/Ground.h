@@ -1,8 +1,7 @@
 /*
  * Ground.h
  *
- *  Created on: Jun 19, 2013
- *      Author: esa
+ * Author: Esa Varemo
  */
 
 #ifndef GROUND_H_

@@ -1,3 +1,9 @@
+/*
+ * EntityFlags.h
+ *
+ * Author: Esa Varemo
+ */
+
 #ifndef ENTITYFLAGS_H
 #define ENTITYFLAGS_H
 

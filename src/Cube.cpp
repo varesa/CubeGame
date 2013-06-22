@@ -1,8 +1,7 @@
 /*
  * Cube.cpp
  *
- *  Created on: Jan 31, 2013
- *      Author: esa
+ * Author: Esa Varemo
  */
 
 #include <iostream>

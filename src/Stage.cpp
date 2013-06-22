@@ -1,3 +1,9 @@
+/*
+ * Stage.cpp
+ *
+ * Author: Esa Varemo
+ */
+
 #include <fstream>
 #include <string>
 #include <iostream>

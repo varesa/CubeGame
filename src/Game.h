@@ -1,3 +1,9 @@
+/*
+ * Game.h
+ *
+ * Author: Esa Varemo
+ */
+
 #include "Ground.h"
 #include "Cube.h"
 #include "Entity.h"

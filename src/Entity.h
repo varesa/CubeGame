@@ -1,3 +1,9 @@
+/*
+ * Entity.h
+ *
+ * Author: Esa Varemo
+ */
+
 #ifndef ENTITY_H
 #define ENTITY_H
 

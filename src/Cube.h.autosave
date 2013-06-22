@@ -1,8 +1,7 @@
 /*
  * Cube.h
  *
- *  Created on: Jan 31, 2013
- *      Author: Esa
+ * Author: Esa Varemo
  */
 
 #include "Entity.h"

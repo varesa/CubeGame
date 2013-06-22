@@ -1,3 +1,8 @@
+#
+# Makefile for CubeGame
+# Author: Esa Varemo
+#
+
 
 #Directory for *.o, *.d, etc.
 BUILDDIR=build

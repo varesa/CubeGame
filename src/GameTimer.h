@@ -1,8 +1,7 @@
 /*
- * Timer.h
+ * GameTimer.h
  *
- *  Created on: Jan 31, 2013
- *      Author: esa
+ * Author: Esa Varemo
  */
 
 #ifndef TIMER_H_

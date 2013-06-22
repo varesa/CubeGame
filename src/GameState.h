@@ -1,3 +1,9 @@
+/*
+ * GameState.h
+ *
+ * Author: Esa Varemo
+ */
+
 #ifndef GAMESTATE_H
 #define GAMESTATE_H
 

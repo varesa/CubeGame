@@ -1,8 +1,7 @@
 /*
  * Main.cpp
  *
- *  Created on: Feb 2, 2013
- *      Author: esa
+ * Author: Esa Varemo
  */
 
 #include <GL/gl.h>

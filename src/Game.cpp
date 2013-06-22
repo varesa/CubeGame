@@ -1,3 +1,9 @@
+/*
+ * Game.cpp
+ *
+ * Author: Esa Varemo
+ */
+
 #include <fstream>
 #include <iostream>
 #include <exception>
