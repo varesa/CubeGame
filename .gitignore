@@ -3,9 +3,15 @@
 .cproject
 .project
 
-# Qt-Creator project
+# Qt-Creator qmake-project
 *.pro
 *.pro.*
+
+# Qt-Creator general C++ project
+CubeGame.config
+CubeGame.files
+CubeGame.includes
+CubeGame.creator*
 
 # Compilation directories specified in Makefile
 target/
