@@ -26,7 +26,7 @@ std::vector<Entity*>* Stage::getEntities() {
     return entities;
 }
 
-std::vector<Ground*>* getGround() {
+std::vector<Ground*>* Stage::getGround() {
     return ground;
 }
 
