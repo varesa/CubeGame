@@ -8,7 +8,7 @@
 #define GAMESTATE_H_
 
 enum class GameState {
-	START, INGAME, GAMEOVER
+    START, INGAME, PAUSED, GAMEOVER
 };
 
 #endif /* GAMESTATE_H_ */
