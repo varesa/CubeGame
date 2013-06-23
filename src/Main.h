@@ -16,6 +16,7 @@ class Main
 public:
     Main();
     static int main(int argc, char **argv);
+    static Game* getGame();
 
 private:
     static GameTimer *timer;

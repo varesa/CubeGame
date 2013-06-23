@@ -124,3 +124,7 @@ int Main::main(int argc, char **argv) {
 
     glutMainLoop();
 }
+
+Game* Main::getGame() {
+    return game;
+}
