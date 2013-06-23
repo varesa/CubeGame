@@ -25,6 +25,7 @@ private:
     void initPlayerSpawn(std::ifstream* file);
 
     std::vector<Ground*> *ground;
+    std::vector<Entity*> *otherEntities;
 };
 
 #endif /* STAGE_H_ */
