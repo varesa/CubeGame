@@ -9,7 +9,7 @@ BUILDDIR=build
 SRCDIR=src
 TARGETDIR=target
 
-SOURCES=Entity.cpp Cube.cpp Game.cpp Main.cpp Ground.cpp GameTimer.cpp Stage.cpp
+SOURCES=Entity.cpp Cube.cpp Game.cpp main.cpp Ground.cpp GameTimer.cpp Stage.cpp utils.cpp
 DEPLOY=stage.txt
 EXECUTABLE=cubeGame
 
