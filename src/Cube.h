@@ -15,6 +15,7 @@ public:
 	Cube();
 	void draw();
 	void act(bool* keys, long time);
+    void setPlayerControlled(bool pc);
 
 private:
 	//x, y and z inherited from Entity
@@ -22,7 +23,14 @@ private:
     float vx;
     float vy;
 
+    float xtarget;
+    float ytarget;
+
 	float size;
+
+    bool playerControlled;
+
+    void applyPhysics(long time);
 };
 
 #endif /* CUBE_H_ */
