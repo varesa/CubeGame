@@ -40,4 +40,6 @@ $(TARGETDIR):
 clean:
 	rm $(EXECUTABLE) $(BUILDDIR) -r
 
+run: all
+	cd $(TARGETDIR); ./$(EXECUTABLE)
 -include $(DEPFILES)
