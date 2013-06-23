@@ -24,6 +24,18 @@ std::vector<Entity*>* Game::getEntities() {
     return stage->getEntities();
 }
 
+void Game::setGameState(GameState state) {
+    this->gameState = state;
+}
+
+GameState Game::getGameState() {
+    return this->gameState;
+}
+
+Stage* Game::getStage() {
+    return stage;
+}
+
 void Game::init() {
 	gameState = GameState::START;
 

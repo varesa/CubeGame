@@ -16,11 +16,13 @@
 class Game {
 public:
 	Game();
-	void init();
-	GameState gameState;
+    void init();
 	std::vector<Entity*>* getEntities();
+    void setGameState(GameState state);
+    GameState getGameState();
+    Stage* getStage();
 private:
-
+    GameState gameState;
     Stage* stage;
 	Cube *player;
 	std::vector<Cube*> enemies;
