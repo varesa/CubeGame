@@ -19,6 +19,13 @@ Stage::Stage()
     otherEntities = new std::vector<Entity*>();
 }
 
+std::vector<Entity*>* Stage::getEntities() {
+    std::vector<Entity*> *entities = new std::vector<Entity*>();
+    entities->insert(entities->end(), ground->begin(), ground->end());
+    entities->insert(entities->end(), otherEntities->begin(), otherEntities->end());
+    return entities;
+}
+
 void Stage::initStage() {
     std::ifstream *stageFile = new std::ifstream();
     stageFile->open("stage.txt");
@@ -46,13 +53,6 @@ void Stage::initGround(std::ifstream* file) {
             ground->push_back(new Ground(x, y , w, h));
         }
     }
-}
-
-std::vector<Entity*>* Stage::getEntities() {
-    std::vector<Entity*> *entities = new std::vector<Entity*>();
-    entities->insert(entities->end(), ground->begin(), ground->end());
-    entities->insert(entities->end(), otherEntities->begin(), otherEntities->end());
-    return entities;
 }
 
 void Stage::initEnemySpawns(std::ifstream* file) {
