@@ -14,6 +14,7 @@
 class Entity {
 
 public:
+    Entity();
     virtual void act(bool* keys, long deltaT);
     virtual void draw();
 
