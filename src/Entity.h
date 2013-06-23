@@ -14,7 +14,7 @@
 class Entity {
 
 public:
-	virtual void act(long deltaT);
+    virtual void act(bool* keys, long deltaT);
     virtual void draw();
 
 protected:

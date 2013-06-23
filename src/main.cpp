@@ -69,7 +69,7 @@ void renderScene() {
 
 	unsigned int i;
 	for(i = 0; i < entities->size(); i++) {
-		((Entity*) entities->at(i))->act(deltaT);
+        ((Entity*) entities->at(i))->act(spKeys, deltaT);
 	}
 
 	glTranslatef(0, 0, -650.0f);
@@ -77,10 +77,6 @@ void renderScene() {
     fflush(stdout);
 	for(i = 0; i< entities->size(); i++) {
         ((Entity*) entities->at(i))->draw();
-        if (typeid(entities->at(i)) == typeid(Cube)) {
-            printf("A cube found");
-            fflush(stdout);
-        }
 	}
 
 	glutSwapBuffers();
