@@ -78,7 +78,7 @@ float Ground::getY(){
     return y;
 }
 
-float Ground::getWodth(){
+float Ground::getWidth(){
     return width;
 }
 

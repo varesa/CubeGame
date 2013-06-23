@@ -18,7 +18,7 @@ public:
 
     float getX();
     float getY();
-    float getWodth();
+    float getWidth();
     float getHeight();
 
 
