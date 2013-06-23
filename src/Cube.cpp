@@ -17,15 +17,15 @@
 #include "Entity.h"
 #include "utils.h"
 
-#define PLAYER_MAXSPEED 100
-#define PLAYER_ACCEL 10
-#define PLAYER_DECEL 15
+#define PLAYER_MAXSPEED 80
+#define PLAYER_ACCEL 15
+#define PLAYER_DECEL 20
 
-#define ENEMY_MAXSPEED 90
+#define ENEMY_MAXSPEED 60
 #define ENEMY_ACCEL 10
 #define ENEMY_DECEL 10
 
-#define GRAV_ACCEL 1
+#define GRAV_ACCEL 9
 
 Cube::Cube(float x, float y, float z, float size) {
 	this->x = x;
@@ -41,6 +41,7 @@ Cube::Cube() {
 	size = 10;
     vx = 0;
     vy = 0;
+    wasGrounded = false;
 }
 
 void Cube::draw() {
@@ -68,7 +69,7 @@ void Cube::act(bool* keys, long time) {
         }
 
         if(keys[GLUT_KEY_UP]) {
-            this->ytarget = 1;
+            this->ytarget = 10;
         }
 
     } else {               // Or an enemy
@@ -109,12 +110,23 @@ void Cube::applyPhysics(long time) {
     } else {
 
     }
+
+
+    if(ytarget > 1 && wasGrounded) {
+        this->vy += 70;
+    }
+
+
+    wasGrounded = false;
+
+    vy -= GRAV_ACCEL * (dTime/100);
+
     x += vx * (dTime/100);
+    y += vy * (dTime/100);
 
     std::vector<Ground*> *ground = Main::getGame()->getStage()->getGround();
 
-
-    int i;
+    unsigned int i;
     for(i = 0; i < ground->size(); i++) {
         Ground *g = ground->at(i);
         if( (g->getY() < y && y < g->getY()+g->getHeight()) || (g->getY() < y+size && y+size < g->getY()+g->getY()) ) {
@@ -127,6 +139,25 @@ void Cube::applyPhysics(long time) {
                 if(origX > g->getX()+g->getWidth() && x < g->getX()+g->getWidth()) {
                     x = g->getX() + g->getWidth() + 0.1;
                     vx = 0;
+                }
+            }
+        }
+
+
+
+        if( (g->getX() < x && x < g->getX() + g->getWidth()) || (g->getX() < x+size && x+size < g->getX() + g->getWidth())) {
+            if(vy > 0) {
+                if(origY+size < g->getY() && y+size > g->getY()) {
+                    d("Hit up\n");
+                    y = g->getY() - size - 0.1;
+                    vy = 0;
+                }
+            } else {
+                if(origY > g->getY() + g->getHeight() && y < g->getY() + g->getHeight()) {
+                    d("Hit bottom\n");
+                    y = g->getY() + g->getHeight() + 0.1;
+                    vy = 0;
+                    wasGrounded = true;
                 }
             }
         }

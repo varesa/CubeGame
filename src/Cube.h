@@ -28,6 +28,7 @@ private:
 
 	float size;
 
+    bool wasGrounded;
     bool playerControlled;
 
     void applyPhysics(long time);
