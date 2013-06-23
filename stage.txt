@@ -1,3 +1,12 @@
+#
+# File describing a stage:
+#
+#   Format:
+#     gX Y W H -creates a ground object of size WxH at X,Y
+#     pX Y Z S -creates a player controlled cube of size S at X,Y,Z
+#     eX Y Z S -creates an enemy-spawner at X,Y,Z with size S
+
+
 g-256 -256 0 512
 g256 -256 0 512
 g-256 -256 512 0
@@ -11,6 +20,8 @@ g128 -8 128 8
 
 g-256 -136 192 8
 g64 -136 192 8
+
+p0 0 0 32
 
 #-128 -128 256 256
 #-256 -128 200 16
