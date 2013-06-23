@@ -26,6 +26,10 @@ std::vector<Entity*>* Stage::getEntities() {
     return entities;
 }
 
+std::vector<Ground*>* getGround() {
+    return ground;
+}
+
 void Stage::initStage() {
     std::ifstream *stageFile = new std::ifstream();
     stageFile->open("stage.txt");

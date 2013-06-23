@@ -19,6 +19,7 @@ public:
     Stage();
     void initStage();
     std::vector<Entity*>* getEntities();
+    std::vector<Ground*>* getGround();
 private:
     void initGround(std::ifstream* file);
     void initEnemySpawns(std::ifstream* file);
