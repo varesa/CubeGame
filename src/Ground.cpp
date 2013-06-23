@@ -19,6 +19,16 @@ Ground::Ground(float x, float y, float w, float h) {
 	this->y = y;
 	this->width = w;
 	this->height = h;
+
+    if(width < 0) {
+        x -= width;
+        width = -width;
+    }
+
+    if(height < 0) {
+        y -= height;
+        y = -y;
+    }
 }
 
 Ground::Ground() {
@@ -60,4 +70,18 @@ void Ground::draw(long deltaT) {
 	glEnd();
 }
 
+float Ground::getX() {
+    return x;
+}
 
+float Ground::getY(){
+    return y;
+}
+
+float Ground::getWodth(){
+    return width;
+}
+
+float Ground::getHeight(){
+    return height;
+}
