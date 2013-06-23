@@ -9,7 +9,7 @@ BUILDDIR=build
 SRCDIR=src
 TARGETDIR=target
 
-SOURCES=Entity.cpp Cube.cpp Game.cpp main.cpp Ground.cpp GameTimer.cpp Stage.cpp utils.cpp
+SOURCES=Entity.cpp Cube.cpp Game.cpp Main.cpp entry.cpp Ground.cpp GameTimer.cpp Stage.cpp utils.cpp
 DEPLOY=stage.txt
 EXECUTABLE=cubeGame
 
@@ -19,7 +19,7 @@ DEPFILES=$(addprefix $(BUILDDIR)/,$(SOURCES:.cpp=.d))
 
 CC=g++
 LIBS=-lGL -lGLU -lglut
-CFLAGS=-Wall -MMD -std=c++11
+CFLAGS=-Wall -MMD -std=c++11 -g
 
 all: $(EXECUTABLE) | $(TARGETDIR)
 	cp $(BUILDDIR)/$(EXECUTABLE) $(TARGETDIR)/
