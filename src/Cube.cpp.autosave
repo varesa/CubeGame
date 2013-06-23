@@ -104,6 +104,6 @@ void Cube::applyPhysics(long time) {
     }
     x += vx * (dTime/100);
 
-
+    
 
 }
