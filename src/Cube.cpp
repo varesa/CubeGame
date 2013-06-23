@@ -5,11 +5,16 @@
  */
 
 #include <iostream>
+#include <vector>
 #include <math.h>
 
 #include <GL/glut.h>
 
 #include "Cube.h"
+#include "Main.h"
+#include "Game.h"
+#include "Ground.h"
+#include "Entity.h"
 #include "utils.h"
 
 #define PLAYER_MAXSPEED 100
@@ -34,12 +39,14 @@ Cube::Cube() {
 	y = 0;
 	z = 0;
 	size = 10;
+    vx = 0;
+    vy = 0;
 }
 
 void Cube::draw() {
-	glTranslatef(x, y, z);
-	glutWireCube(this->size);
-	glTranslatef(-x, -y, -z);
+    glTranslatef(x + 0.5 * size, y + 0.5 * size, -z - 0.5 * size - 40);
+    glutWireCube(this->size);
+    glTranslatef(-(x + 0.5 * size), -(y + 0.5 * size), z + 0.5 * size + 40);
 }
 
 void Cube::act(bool* keys, long time) {
@@ -104,6 +111,25 @@ void Cube::applyPhysics(long time) {
     }
     x += vx * (dTime/100);
 
+    std::vector<Ground*> *ground = Main::getGame()->getStage()->getGround();
 
+
+    int i;
+    for(i = 0; i < ground->size(); i++) {
+        Ground *g = ground->at(i);
+        if( (g->getY() < y && y < g->getY()+g->getHeight()) || (g->getY() < y+size && y+size < g->getY()+g->getY()) ) {
+            if(vx > 0) {
+                if(origX+size < g->getX() && x+size > g->getX()) {
+                    x = g->getX() - size - 0.1;
+                    vx = 0;
+                }
+            } else {
+                if(origX > g->getX()+g->getWidth() && x < g->getX()+g->getWidth()) {
+                    x = g->getX() + g->getWidth() + 0.1;
+                    vx = 0;
+                }
+            }
+        }
+    }
 
 }
