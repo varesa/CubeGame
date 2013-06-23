@@ -15,7 +15,7 @@ class Entity {
 
 public:
 	virtual void act(long deltaT);
-	virtual void draw(long deltaT);
+    virtual void draw();
 
 protected:
 	float x;

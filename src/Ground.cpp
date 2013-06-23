@@ -35,7 +35,7 @@ Ground::Ground() {
 
 }
 
-void Ground::draw(long deltaT) {
+void Ground::draw() {
 	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 	glBegin(GL_QUADS);
 		glVertex3f(x+width, y+height, 0);

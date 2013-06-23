@@ -5,6 +5,7 @@
  */
 
 #include <iostream>
+#include <typeinfo>
 
 #include <GL/gl.h>
 #include <GL/glu.h>
@@ -73,8 +74,13 @@ void renderScene() {
 
 	glTranslatef(0, 0, -650.0f);
 
+    fflush(stdout);
 	for(i = 0; i< entities->size(); i++) {
-		((Entity*) entities->at(i))->draw(deltaT);
+        ((Entity*) entities->at(i))->draw();
+        if (typeid(entities->at(i)) == typeid(Cube)) {
+            printf("A cube found");
+            fflush(stdout);
+        }
 	}
 
 	glutSwapBuffers();

@@ -14,7 +14,7 @@ public:
 	Ground();
 	Ground(float x, float y, float width, float height);
 
-	void draw(long deltaT);
+    void draw();
 
     float getX();
     float getY();
